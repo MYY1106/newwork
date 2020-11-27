@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .as {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="as">
+            imformation input
+        </p>
+        <p class="as">
+            555555！！！！
+        </p>
+        <input type="button" value="+" class="jia">
+        <input type="button" value="-" class="jian">
+        <input type="button" value="change" class="color">
+    </div>
+</body>
+
+
+
+
+<script>
+    var jia = document.querySelector('.jia');
+    var jian = document.querySelector('.jian');
+    var content = document.querySelectorAll('.as');
+    var color = document.querySelector('.color');
+    var num = 20;
+    jia.onclick = function () {
+        for (let i = 0; i < content.length; i++) {
+            num++;
+            content[i].style.fontSize = num + 'px';
+        }
+    }
+
+    jian.onclick = function () {
+        for (let i = 0; i < content.length; i++) {
+            num--;
+            content[i].style.fontSize = num + 'px';
+        }
+    }
+
+    color.onclick = function () {
+        this.style.color = 'red';
+        jian.style.color = 'red';
+        jia.style.color = 'red';
+        for (let i = 0; i < content.length; i++) {
+            content[i].style.color = '#999';
+        }
+
+    }
+
+</script>
+
+</html>
